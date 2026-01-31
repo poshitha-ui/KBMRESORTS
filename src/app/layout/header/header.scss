@@ -1,0 +1,121 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 6px 0;
+  border-bottom: 1px solid #ceceea;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 0 -0.5rem;
+  padding: 0 0.5rem;
+}
+
+// header {
+//   position: sticky;
+//   top: 0;
+//   z-index: 1000;
+//   background: #fff;
+// }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+}
+
+.dropdown-menu-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.pb-card {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+
+.cta-free {
+  background: var(--primary-color);
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  color: #fff;
+}
+.all-cities-btn{
+  cursor: pointer;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    align-items: center;
+    color: var(--p-primary-color);
+}
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 2000;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+/* 1. Dropdown container */
+.dropdown-box {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  /* KEY */
+  max-height: calc(100vh - 200px); // adjust based on header height
+  overflow: hidden; // prevent whole dropdown scrolling
+  ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 10px;
+    list-style-type: none;
+    li a{
+      font-size: 14px;
+    }
+  }
+}
+.star {
+      color: var(--p-primary-color);
+      margin-left: 4px;
+      font-size: 14px;
+    }
+/* 2. Grid wrapper */
+.dropdown-box .grid {
+  height: 100%;
+}
+
+/* 3. Left column – MAP */
+.dropdown-box .__left--iframe-card {
+  position: sticky;
+  top: 16px; // spacing from top of dropdown
+  height: 100%;
+  background-color: #f7f7f7;
+}
+
+/* 4. Right column – Tabs scroll */
+.dropdown-box .md\:col-8 {
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* Optional: nicer scrollbar */
+.dropdown-box .md\:col-8::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-box .md\:col-8::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 4px;
+}

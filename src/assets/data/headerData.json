@@ -1,0 +1,81 @@
+{
+  "header": {
+
+    "navigation": [
+      {
+        "title": "Destinations",
+        "dropdown": true,
+        "sections": [
+          {
+            "title": "Celebrating our fellow entrepreneurs",
+            "description": "With our roots as a small start up, we understand the little intricacies and problems fellow SMEs face.",
+            "link": {
+              "text": "Learn more",
+              "class": "pb-learn-more"
+            }
+          },
+          {
+            "title": "Features",
+            "items": [
+              {
+                "title": "Payroll processing",
+                "icon": "https://payboy.sg/wp-content/uploads/2024/04/Payroll-module-icon.png",
+                "color": "#0048ff",
+                "description": "Automate payroll and payslips with just a click."
+              },
+              {
+                "title": "Leave management",
+                "icon": "https://payboy.sg/wp-content/uploads/2024/04/Leaves-Module-icon.png",
+                "color": "#ffaa29",
+                "description": "Apply for leaves digitally, check leave balance and approve leaves."
+              },
+              {
+                "title": "Claims Management",
+                "icon": "https://payboy.sg/wp-content/uploads/2024/04/Claims-icon.png",
+                "color": "#0fc6ae",
+                "description": "Set claim policies for different roles and approve them with ease."
+              },
+              {
+                "title": "Time & Attendance Tracker",
+                "icon": "https://payboy.sg/wp-content/uploads/2024/04/Attendance-icon.png",
+                "color": "#643a96",
+                "description": "Check in and out from our mobile app from anywhere."
+              },
+              {
+                "title": "Shift Scheduling",
+                "icon": "https://payboy.sg/wp-content/uploads/2024/04/Schedule.png",
+                "color": "#ee3435",
+                "description": "Drag and drop shifts to allocate staff based on availability."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Special Features",
+        "dropdown": false
+        
+      },
+      {
+        "title": "Explore Management",
+        "dropdown": false
+      }
+    ],
+    "actions": [
+      {
+        "text": "Book a Demo",
+        "type": "button",
+        "class": "pb-hdr-col-layout mr-4"
+      },
+      {
+        "text": "Log In",
+        "type": "link"
+      },
+      {
+        "text": "Sign Up",
+        "type": "link",
+        "class": "cta-free"
+      }
+    ]
+  }
+}

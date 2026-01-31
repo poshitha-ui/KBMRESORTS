@@ -1,0 +1,571 @@
+<!-- overlay -->
+<div *ngIf="activeDropdown" class="overlay" (click)="closeDropdown()"></div>
+
+<header class="app-header">
+    <div class="grid bg-primary grid-top">
+        <div class="col-12">
+            <p class="text-center">
+                <a class="font-semibold" href="#">Use code LABOR20 for 20% off!, Free Rental Car - Click Here</a>
+            </p>
+        </div>
+    </div>
+    <div class="app-container-fluid">
+
+        <div class="flex justify-content-between align-items-center relative">
+
+            <!-- Logo -->
+            <div class="kbm-hdr-col-layout">
+                <img width="210" src="https://kbmresorts.com/assets/images/header-logo.png" />
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:block kbm-hdr-col-layout">
+                <ul class="flex gap-6 list-none">
+
+                    <!-- destinations -->
+                    <li class="">
+                        <a href="#" class="flex align-items-center gap-2"
+                            (click)="$event.preventDefault(); toggleDropdown('destinations')">
+                            Destinations <i class="pi pi-angle-down text-xs"></i>
+                        </a>
+
+                        <div *ngIf="activeDropdown === 'destinations'" class="dropdown-box mt-4 absolute left-0 w-full">
+                            <div class="grid">
+
+                                <!-- Cards -->
+                                <div class="md:col-8">
+                                    <div class="px-2">
+                                        <p-tabs value="0" class="">
+                                            <p-tablist class="intro">
+                                                <p-tab value="0">Park City</p-tab>
+                                                <p-tab value="1">Maui</p-tab>
+                                                <p-tab value="2">Big Island</p-tab>
+                                                <p-tab value="3">Oahu</p-tab>
+
+                                                <a class="all-cities-btn" href="#">See all Park City Listings</a>
+                                            </p-tablist>
+                                            <p-tabpanels class="items">
+                                                <p-tabpanel value="0">
+                                                    <div class="m-0">
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2">Locales</h5>
+                                                            <ul>
+
+                                                                <li><a href="">Canyons</a></li>
+                                                                <li><a href="">Deer Valley</a></li>
+                                                                <li><a href="">Jordanelle</a></li>
+                                                                <li><a href="">Chatham Crossing</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2 text-primary">Popular <span class="star">★</span></h5>
+                                                            <ul>
+
+                                                                <li><a href="">Aspen Grove</a></li>
+                                                                <li><a href="">Bristlecone</a></li>
+                                                                <li><a href="">Crestview Condominiums</a></li>
+                                                                <li><a href="">In The Trees</a></li>
+                                                                <li><a href="">Racquet Club</a></li>
+                                                                <li><a href="">Struggler</a></li>
+                                                                <li><a href="">Timber Wolf Lodge</a></li>
+                                                                <li><a href="">Black Bear Lodge</a></li>
+                                                                <li><a href="">Chatham Crossing</a></li>
+                                                                <li><a href="">Deer Valley</a></li>
+                                                                <li><a href="">Lift Lodge</a></li>
+                                                                <li><a href="">Red Pine</a></li>
+                                                                <li><a href="">The Lookout</a></li>
+                                                                <li><a href="">Town Pointe</a></li>
+                                                                <li><a href="">Boulder Creek</a></li>
+                                                                <li><a href="">Copperbottom Inn</a></li>
+                                                                <li><a href="">Hidden Creek</a></li>
+                                                                <li><a href="">Park City</a></li>
+                                                                <li><a href="">Ridgepoint</a></li>
+                                                                <li><a href="">The Mason</a></li>
+                                                                <li><a href="">Vintage on the Strand</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2">All Big Island Resorts</h5>
+                                                            <ul>
+                                                                <li><a href="#">300 Roundabout</a></li>
+                                                                <li><a href="#">Aspen Grove</a> <span
+                                                                        class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Black Diamond</a></li>
+                                                                <li><a href="#">Chaparral</a></li>
+                                                                <li><a href="#">Crestview Condominiums</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Edelweiss Haus</a></li>
+                                                                <li><a href="#">Grand Lodge</a></li>
+                                                                <li><a href="#">In The Trees</a> <span
+                                                                        class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Kings Crown</a></li>
+                                                                <li><a href="#">Lift Lodge</a> <span
+                                                                        class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Lofts on Deer Valley</a></li>
+                                                                <li><a href="#">Park City</a> <span
+                                                                        class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Powder Run</a></li>
+                                                                <li><a href="#">Resort Plaza</a></li>
+                                                                <li><a href="#">Shooting Star</a></li>
+                                                                <li><a href="#">Stonebridge</a></li>
+                                                                <li><a href="#">The Belles at Empire Pass</a></li>
+                                                                <li><a href="#">The Oaks</a></li>
+                                                                <li><a href="#">Town Lift Condo</a></li>
+                                                                <li><a href="#">Vintage on the Strand</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">White Pine Canyons Village</a></li>
+
+                                                                <li><a href="#">Apex</a></li>
+                                                                <li><a href="#">Aspen Hollow</a></li>
+                                                                <li><a href="#">Boulder Creek</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Chatham Crossing</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Deer Valley</a> <span
+                                                                        class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Flagstaff Lodge</a></li>
+                                                                <li><a href="#">Hidden Creek</a> <span
+                                                                        class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Ironwood</a></li>
+                                                                <li><a href="#">La Maconnerie</a></li>
+                                                                <li><a href="#">Little Belle</a></li>
+                                                                <li><a href="#">Motherlode</a></li>
+                                                                <li><a href="#">Parkview</a></li>
+                                                                <li><a href="#">Racquet Club</a> <span
+                                                                        class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Ridgepoint</a> <span
+                                                                        class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Silver Star Cottages</a></li>
+                                                                <li><a href="#">Struggler</a> <span
+                                                                        class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">The Lookout</a> <span
+                                                                        class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Three Kings</a></li>
+                                                                <li><a href="#">Town Pointe</a> <span
+                                                                        class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Viridian Residences</a></li>
+
+                                                                <li><a href="#">Arrowleaf</a></li>
+                                                                <li><a href="#">Black Bear Lodge</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Bristlecone</a> <span
+                                                                        class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Copperbottom Inn</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Double Eagle</a></li>
+                                                                <li><a href="#">Glenfiddich</a></li>
+                                                                <li><a href="#">Hyatt Centric</a></li>
+                                                                <li><a href="#">Juniper Landing</a></li>
+                                                                <li><a href="#">Lift</a></li>
+                                                                <li><a href="#">Lofts at Blackstone</a></li>
+                                                                <li><a href="#">One Empire Pass</a></li>
+                                                                <li><a href="#">Payday</a></li>
+                                                                <li><a href="#">Red Pine</a> <span class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Royal Plaza</a></li>
+                                                                <li><a href="#">Silver Strike Lodge</a></li>
+                                                                <li><a href="#">Sundial Lodge</a></li>
+                                                                <li><a href="#">The Mason</a> <span
+                                                                        class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Timber Wolf Lodge</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Trailside</a></li>
+                                                                <li><a href="#">Westgate</a></li>
+                                                            </ul>
+
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2">Private Homes</h5>
+                                                            <ul>
+                                                                <li><a href="">Canyons</a></li>
+                                                                <li><a href="">Deer Valley</a></li>
+                                                                <li><a href="">Jordanelle</a></li>
+                                                                <li><a href="">Chatham Crossing</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </p-tabpanel>
+                                                <p-tabpanel value="1">
+                                                    <div class="m-0">
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2">Locales</h5>
+                                                            <ul>
+                                                                <li><a href="#">Kaanapali</a></li>
+                                                                <li><a href="#">Lahaina</a></li>
+                                                                <li><a href="#">Kapalua</a></li>
+                                                                <li><a href="#">Napili</a></li>
+                                                                <li><a href="#">Kihei</a></li>
+                                                                <li><a href="#">Wailea</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2 text-primary">Popular <span class="star">★</span>
+                                                            </h5>
+                                                            <ul>
+                                                                <li><a href="#">Grand Champions</a></li>
+                                                                <li><a href="#">International Colony Club</a></li>
+                                                                <li><a href="#">Kaanapali Shores</a></li>
+                                                                <li><a href="#">Kapalua Ridge Villas</a></li>
+                                                                <li><a href="#">Mahana</a></li>
+                                                                <li><a href="#">Montage Kapalua Bay</a></li>
+                                                                <li><a href="#">Papakea</a></li>
+                                                                <li><a href="#">Sands of Kahana</a></li>
+                                                                <li><a href="#">Wailea Ekahi Village</a></li>
+                                                                <li><a href="#">Hale Ono Loa</a></li>
+                                                                <li><a href="#">Kaanapali Plantation</a></li>
+                                                                <li><a href="#">Kapalua Bay Villas</a></li>
+                                                                <li><a href="#">Lokelani</a></li>
+                                                                <li><a href="#">Maui Eldorado</a></li>
+                                                                <li><a href="#">Napili Bay</a></li>
+                                                                <li><a href="#">Polo Beach Club</a></li>
+                                                                <li><a href="#">Valley Isle</a></li>
+                                                                <li><a href="#">Wailea Elua Village</a></li>
+                                                                <li><a href="#">Honua Kai</a></li>
+                                                                <li><a href="#">Kaanapali Royal</a></li>
+                                                                <li><a href="#">Kapalua Golf Villas</a></li>
+                                                                <li><a href="#">Maalaea Surf</a></li>
+                                                                <li><a href="#">Maui Kaanapali Villas</a></li>
+                                                                <li><a href="#">Napili Point</a></li>
+                                                                <li><a href="#">Residences at Napili Bay</a></li>
+                                                                <li><a href="#">Wailea Beach Villas</a></li>
+                                                                <li><a href="#">Whaler</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2">All Maui Resorts</h5>
+                                                            <ul>
+                                                                <li><a href="#">Grand Champions</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Honua Kai</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Kaanapali Coffee Farms</a></li>
+                                                                <li><a href="#">Kaanapali Shores</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Kahana Villa</a></li>
+                                                                <li><a href="#">Kapalua Bay Villas</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Kihei</a></li>
+                                                                <li><a href="#">Maalaea Surf</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Maui Eldorado</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Montage Kapalua Bay</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Napili Shores</a></li>
+                                                                <li><a href="#">Polo Beach Club</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Royal Kahana</a></li>
+                                                                <li><a href="#">The Palms at Wailea</a></li>
+                                                                <li><a href="#">Wailea Ekahi Village</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Whaler</a> <span class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Hale Ono Loa</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">International Colony Club</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Kaanapali Plantation</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Kahana Reef</a></li>
+                                                                <li><a href="#">Kamaole Beach Royale</a></li>
+                                                                <li><a href="#">Kapalua Golf Villas</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Lahaina Shores</a></li>
+                                                                <li><a href="#">Mahana</a> <span class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Maui Kaanapali Villas</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Napili Bay</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Nohonani Condos</a></li>
+                                                                <li><a href="#">Puamana</a></li>
+                                                                <li><a href="#">Royal Mauian</a></li>
+                                                                <li><a href="#">Valley Isle</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Wailea Ekolu</a></li>
+                                                                <li><a href="#">Hololani</a></li>
+                                                                <li><a href="#">Kaanapali Alii</a></li>
+                                                                <li><a href="#">Kaanapali Royal</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Kahana Sunset</a></li>
+                                                                <li><a href="#">Kamaole Sands</a></li>
+                                                                <li><a href="#">Kapalua Ridge Villas</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Lokelani</a> <span class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Maui Banyan</a></li>
+                                                                <li><a href="#">Maui Sands</a></li>
+                                                                <li><a href="#">Napili Point</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Papakea</a> <span class="star">★</span>
+                                                                </li>
+                                                                <li><a href="#">Residences at Napili Bay</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Sands of Kahana</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Wailea Beach Villas</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Wailea Elua Village</a> <span
+                                                                        class="star">★</span></li>
+                                                            </ul>
+
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2">Private Homes</h5>
+                                                            <ul>
+                                                                <li><a href="#">Kaanapali</a></li>
+                                                                <li><a href="#">Lahaina</a></li>
+                                                                <li><a href="#">Kapalua</a></li>
+                                                                <li><a href="#">Napili</a></li>
+                                                                <li><a href="#">Kihei</a></li>
+                                                                <li><a href="#">Wailea</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </p-tabpanel>
+                                                <p-tabpanel value="2">
+                                                    <div class="m-0">
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2">Locales</h5>
+                                                            <ul>
+                                                                <li><a href="#">Hualalai</a></li>
+                                                                <li><a href="#">One Ocean Estates</a></li>
+                                                                <li><a href="#">Mauna Lani</a></li>
+                                                                <li><a href="#">Waikoloa</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2 text-primary">Popular <span class="star">★</span>
+                                                            </h5>
+                                                            <ul>
+                                                                <li><a href="#">Fairway Villas Waikoloa</a></li>
+                                                                <li><a href="#">Kolea Kai</a></li>
+                                                                <li><a href="#">Halii Kai</a></li>
+                                                                <li><a href="#">Waikoloa Colony Villas</a></li>
+                                                                <li><a href="#">Islands at Mauna Lani</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2">All Big Island Resorts</h5>
+                                                            <ul>
+                                                                <li><a href="#">Ainamalu</a></li>
+                                                                <li><a href="#">Golf Villas at Mauna Lani</a></li>
+                                                                <li><a href="#">Islands at Mauna Lani</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Kolea Kai</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Mauna Lani Point</a></li>
+                                                                <li><a href="#">Waikoloa Colony Villas</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Fairway Villas Waikoloa</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Halii Kai</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Ka Milo at Mauna Lani</a></li>
+                                                                <li><a href="#">Kulalani at Mauna Lani</a></li>
+                                                                <li><a href="#">Residences of Lauleʻa</a></li>
+                                                                <li><a href="#">Waiulaula</a></li>
+                                                                <li><a href="#">Fairways at Mauna Lani</a></li>
+                                                                <li><a href="#">Hapuna Beach Residences</a></li>
+                                                                <li><a href="#">Kolea</a></li>
+                                                                <li><a href="#">Kumulani at Mauna Kea Resort</a></li>
+                                                                <li><a href="#">Villages at Mauna Lani</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2">Locales</h5>
+                                                            <ul>
+                                                                <li><a href="#">Hualalai</a></li>
+                                                                <li><a href="#">One Ocean Estates</a></li>
+                                                                <li><a href="#">Mauna Lani</a></li>
+                                                                <li><a href="#">Waikoloa</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </p-tabpanel>
+                                                <p-tabpanel value="3">
+                                                    <div class="m-0">
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2">Locales</h5>
+                                                            <ul>
+                                                                <li><a href="#">Honolulu</a></li>
+                                                                <li><a href="#">North Shore</a></li>
+                                                                <li><a href="#">Ko Olina</a></li>
+                                                                <li><a href="#">Turtle Bay</a></li>
+                                                                <li><a href="#">Kuilima</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2 text-primary">Popular <span class="star">★</span>
+                                                            </h5>
+                                                            <ul>
+                                                                <li><a href="#">Beach Villas at Ko Olina</a></li>
+                                                                <li><a href="#">Kuilima Estates</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2">All Oahu Resorts</h5>
+                                                            <ul>
+                                                                <li><a href="#">Beach Villas at Ko Olina</a> <span
+                                                                        class="star">★</span></li>
+                                                                <li><a href="#">Kuilima Estates</a> <span
+                                                                        class="star">★</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h5 class="text-lg mb-2">Private Homes</h5>
+                                                            <ul>
+                                                                <li><a href="#">Honolulu</a></li>
+                                                                <li><a href="#">North Shore</a></li>
+                                                                <li><a href="#">Ko Olina</a></li>
+                                                                <li><a href="#">Turtle Bay</a></li>
+                                                                <li><a href="#">Kuilima</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </p-tabpanel>
+                                            </p-tabpanels>
+                                        </p-tabs>
+                                    </div>
+                                </div>
+                                <div class="md:col-9 hidden">
+                                    <a class="pb-card">
+                                        <div class="flex gap-2 align-items-center">
+                                            <img width="50"
+                                                src="https://payboy.sg/wp-content/uploads/2024/04/Payroll-module-icon.png" />
+                                            <p class="font-semibold">Payroll processing</p>
+                                        </div>
+                                        <p class="text-sm">
+                                            Automate payroll and payslips with just a click.
+                                        </p>
+                                    </a>
+
+                                    <a class="pb-card">
+                                        <div class="flex gap-2 align-items-center">
+                                            <img width="50"
+                                                src="https://payboy.sg/wp-content/uploads/2024/04/Leaves-Module-icon.png" />
+                                            <p class="font-semibold">Leave management</p>
+                                        </div>
+                                        <p class="text-sm">
+                                            Apply for leaves digitally, check leave balance.
+                                        </p>
+                                    </a>
+
+                                    <!-- continue cards exactly like Vue -->
+                                </div>
+                                <!-- Right Column -->
+                                <div class="md:col-4">
+                                    <div class="__left--iframe-card ">
+                                        <iframe
+                                            src="https://www.google.com/maps?q=record+stores&amp;ll=40.6461,-111.4980&amp;z=14&amp;output=embed"
+                                            width="100%" height="100%" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            style="border: 0; border-radius: 8px;"></iframe>
+                                    </div>
+
+                                    <div class="hidden">
+                                        <h3 class="font-bold mb-3">Get Updates & More</h3>
+                                        <p class="text-gray-800">Subscribe to the free newsletter and stay up to date
+                                        </p>
+                                        <div class="mt-3">
+                                            <p-inputgroup class="newsletter-formgroup">
+                                                <p-inputgroup-addon>
+                                                    <i class="pi pi-envelope"></i>
+                                                </p-inputgroup-addon>
+                                                <input pInputText placeholder="yourmail@domain.com" />
+                                            </p-inputgroup>
+                                            <button pButton class="mt-3 w-full">
+                                                <span pButtonLabel>Subscribe</span>
+                                                <i class="pi pi-check text-white" pButtonIcon></i>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <!-- Repeat same pattern for Resources / Industries / Pricing -->
+
+                    <li>
+                        <a href="#">Specials</a>
+                    </li>
+                    <li>
+                        <a href="#">Explore management</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Desktop Actions -->
+            <div class="md:col-2 flex justify-content-end align-items-center">
+                <p-button class="mr-2 heart-btn" variant="text" [rounded]="true" icon="pi pi-heart" />
+                <app-header-actions></app-header-actions>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden">
+                <button class="p-button p-button-text" (click)="toggleMobileMenu()">
+                    <i class="pi pi-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div><!--end container-->
+
+    <!-- Mobile Menu -->
+    <div *ngIf="isMobileMenuOpen" class="mobile-menu">
+
+        <div class="flex justify-content-between mb-4">
+            <div>
+                <a>Log In</a>
+                <a class="cta-free ml-2">Sign Up</a>
+            </div>
+            <button class="p-button p-button-text" (click)="toggleMobileMenu()">
+                <i class="pi pi-times"></i>
+            </button>
+        </div>
+
+        <button pButton class="w-full mb-4" label="Book a Demo"></button>
+
+        <!-- Mobile Dropdown -->
+        <div class="border-bottom py-3" (click)="toggleMobileDropdown('destinations')">
+            <div class="flex justify-content-between">
+                <span>destinations</span>
+                <i class="pi" [ngClass]="
+              activeMobileDropdown === 'destinations'
+                ? 'pi-angle-up'
+                : 'pi-angle-down'
+            "></i>
+            </div>
+
+            <div *ngIf="activeMobileDropdown === 'destinations'" class="mt-3">
+                <a class="pb-card flex gap-3">
+                    <img width="40" src="https://payboy.sg/wp-content/uploads/2024/04/Payroll-module-icon.png" />
+                    <div>
+                        <p class="font-semibold">Payroll processing</p>
+                        <p class="text-xs">
+                            Automate payroll and payslips.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

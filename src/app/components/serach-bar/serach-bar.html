@@ -1,0 +1,67 @@
+<div class="surface-card p-4 border-round-3xl shadow-2 relative">
+    <h3 class="mb-3 text-lg font-semibold">
+        Find Your Flexible Accommodation
+    </h3>
+
+    <div class="flex gap-3 align-items-center flex-wrap">
+
+        <!-- Location -->
+        <div class="border-1 surface-border px-3 py-2 border-round-xl w-3">
+            <div class="flex align-items-center gap-2">
+                <i class="pi pi-map-marker text-xl"></i>
+                <span class="font-semibold">Where to?</span>
+            </div>
+            <small class="text-600">Search Location</small>
+        </div>
+
+        <!-- Check-in -->
+        <div class="border-1 surface-border px-3 py-2 border-round-xl w-3" (click)="openCalendar()">
+            <div class="flex align-items-center gap-2">
+                <i class="pi pi-calendar"></i>
+                <span class="font-semibold">When</span>
+            </div>
+            <small class="text-600">Add dates</small>
+        </div>
+
+        <!-- DATE PICKER OVERLAY -->
+        <p-datepicker #dp [(ngModel)]="range" selectionMode="range" [inline]="false" [numberOfMonths]="2"
+            [showIcon]="false" [appendTo]="'body'" class="airbnb-calendar"
+            (onSelect)="onDateSelect()"></p-datepicker>
+        <!-- Guests -->
+        <div class="border-1 surface-border px-3 py-2 border-round-xl w-3" (click)="toggleGuests($event)">
+            <div class="flex align-items-center gap-2">
+                <i class="pi pi-user"></i>
+                <span class="font-semibold">Who</span>
+            </div>
+            <small class="text-600">{{ guestSummary || 'Add guests' }}</small>
+        </div>
+
+        <!-- Search Button -->
+        <p-button label="SEARCH" icon="pi pi-search" class=""
+            styleClass="px-5 py-3 border-round-xl bg-primary text-white w-100">
+        </p-button>
+
+    </div>
+
+    <div *ngIf="showGuests" class="guest-backdrop" (click)="closeGuests()"></div>
+    <div *ngIf="showGuests" class="guest-card-wrapper">
+        <p-card class="guest-card">
+            <div class="guest-row" *ngFor="let guest of guests">
+                <div>
+                    <div class="guest-title">{{ guest.label }}</div>
+                    <div class="guest-sub">{{ guest.sub }}</div>
+                </div>
+
+                <div class="flex align-items-center gap-3">
+                    <button pButton icon="pi pi-minus" class="p-button-rounded p-button-text guest-btn"
+                        [disabled]="guest.count === 0" (click)="decrement(guest)"></button>
+
+                    <span class="guest-count">{{ guest.count }}</span>
+
+                    <button pButton icon="pi pi-plus" class="p-button-rounded p-button-text guest-btn"
+                        (click)="increment(guest)"></button>
+                </div>
+            </div>
+        </p-card>
+    </div>
+</div>

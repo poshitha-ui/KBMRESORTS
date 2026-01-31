@@ -1,0 +1,38 @@
+<div class="grid">
+    <div class="col-12 md:col-4">
+        <section class="hotel-filter-wrapper py-4 border-1 border-200 border-round-xl">
+            <div class="flex justify-content-between align-items-center px-4">
+                <h3 class="text-xl font-semibold"> Filter</h3>
+                <a class="">Clear all</a>
+            </div>
+            <p-divider />
+            <app-left-menu></app-left-menu>
+        </section>    
+    </div>
+    <div class="col-12 md:col-8">
+        <div
+            class="sortarea-box flex justify-content-between align-items-center p-4 border-1 border-200 border-round-2xl mb-4">
+            <p class="font-semibold">11 Available properties</p>
+            <div class="flex gap-4">
+                <div class="flex align-items-center">
+                    <p-menu #menu [model]="sortItems" [popup]="true" />
+                    <span> Sort by: </span>
+                    <p-button (click)="menu.toggle($event)" icon="pi pi-sort-down-fill" [text]="true"
+                        severity="secondary" />
+                </div>
+                <ul class="list-none flex align-items-center gap-3">
+                    <li><span class="pi pi-th-large"></span></li>
+                    <li><span class="pi pi-bars"></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="col-12 md:col-6">
+                <app-custom-card></app-custom-card>
+            </div>
+            <div class="col-12 md:col-6">
+                <app-custom-card></app-custom-card>
+            </div>
+        </div>
+    </div>
+</div>

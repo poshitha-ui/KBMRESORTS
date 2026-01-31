@@ -1,0 +1,33 @@
+.app-footer {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+    margin-bottom: -0.5rem;
+    background-color: #f7f7f7;
+
+    h3,
+    h5,
+    i {
+        color: #06465b;
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    .newsletter-formgroup {
+        border: 1px solid #d6dee7;
+        border-radius: 25px;
+        .p-inputgroupaddon {
+            background-color: transparent;
+        }
+        .p-inputgroupaddon, .p-inputtext {
+            border: 0;
+        }
+        .p-inputtext {
+            padding: 12px;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+    }
+
+}

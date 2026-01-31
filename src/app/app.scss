@@ -1,0 +1,14 @@
+.custom-maps {
+    position: sticky;
+    top: 0; /* below header */
+    height: calc(100vh - 10px); /* full height minus header height */
+    
+    @media screen and (max-width: 768px) {
+        height: 300px;
+        /* adjust height for smaller screens */
+    }
+    iframe {
+        border: none;
+        border-radius: 20px;
+    }
+}
