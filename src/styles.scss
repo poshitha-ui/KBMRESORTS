@@ -181,7 +181,9 @@ form.header-fromgroup{
     align-items: center;
     min-height: 250px;
 }
-
+.surface-card h3{
+  color: #06465b;
+}
 /* Common styles */
 .bg-primary { background: var(--p-primary-500); }
 .grid-top { margin-top: -1rem;}

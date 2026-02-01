@@ -2,16 +2,16 @@
     <div class="col-12 md:col-4">
         <section class="hotel-filter-wrapper py-4 border-1 border-200 border-round-xl">
             <div class="flex justify-content-between align-items-center px-4">
-                <h3 class="text-xl font-semibold"> Filter</h3>
+                <h3 class="text-xl font-semibold" style="color: #06465b;"> Filter</h3>
                 <a class="">Clear all</a>
             </div>
             <p-divider />
             <app-left-menu></app-left-menu>
-        </section>    
+        </section>
     </div>
     <div class="col-12 md:col-8">
         <div
-            class="sortarea-box flex justify-content-between align-items-center p-4 border-1 border-200 border-round-2xl mb-4">
+            class="sortarea-box flex justify-content-between align-items-center p-4 border-1 border-200 border-round-2xl mb-4 ml-3">
             <p class="font-semibold">11 Available properties</p>
             <div class="flex gap-4">
                 <div class="flex align-items-center">
@@ -26,13 +26,9 @@
                 </ul>
             </div>
         </div>
-        <div class="grid">
-            <div class="col-12 md:col-6">
-                <app-custom-card></app-custom-card>
+        <div class="grid ml-2">
+                <app-card-grid class="col-12 md:col-6" *ngFor="let property of properties" [data]="property">
+                </app-card-grid>
             </div>
-            <div class="col-12 md:col-6">
-                <app-custom-card></app-custom-card>
-            </div>
-        </div>
     </div>
 </div>

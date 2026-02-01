@@ -54,6 +54,6 @@ export class BannerModule {
   breadcrumbItems: MenuItem[] = [
     { label: 'Home', routerLink: '/' },
     { label: 'Destinatin', routerLink: '/destination' },
-    { label: 'Park City', }
+    { label: 'Canyons', }
   ];
 }

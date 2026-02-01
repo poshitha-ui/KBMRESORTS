@@ -4,11 +4,10 @@ import { Header } from './layout/header/header';
 import { BannerModule } from './components/Banner';
 import { Footer } from './layout/footer/footer';
 import { HotelList } from './pages/hotel-list/hotel-list';
-import { SampleCarousel } from './sample-carousel/sample-carousel';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, BannerModule, Footer, HotelList,SampleCarousel],
+  imports: [RouterOutlet, Header, BannerModule, Footer, HotelList],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

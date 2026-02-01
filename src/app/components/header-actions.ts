@@ -16,8 +16,9 @@ import { MenuItem, MessageService } from 'primeng/api';
     providers: [MessageService],
     styles: `
     :host ::ng-deep .p-motion{
-        top: 60px !important;
-        z-index: 1199 !important;
+            top: 58px !important;
+    z-index: 1199 !important;
+    left: 84% !important;
     }
     `
 })
