@@ -4,6 +4,9 @@ import { providePrimeNG } from 'primeng/config';
 
 import { MyTheme } from './theme/my-theme';
 import { routes } from './app.routes';
+import { register as rigisterSwiperElements } from 'swiper/element/bundle';
+
+rigisterSwiperElements();
 
 export const appConfig: ApplicationConfig = {
   
